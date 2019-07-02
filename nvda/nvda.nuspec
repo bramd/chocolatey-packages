@@ -34,10 +34,10 @@ To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) w
     <copyright>© 2006-2019 NVDA Contributors</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
     <iconUrl>http://community.nvda-project.org/chrome/site/images/nvda_100x100white.png</iconUrl>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.3.3" />
+    </dependencies>
   </metadata>
-  <dependencies>
-    <dependency id="chocolatey-core.extension" version="1.3.3" />
-  </dependencies>
   <files>
     <file src="tools\**" target="tools" />
     <file src="legal\**" target="legal" />
