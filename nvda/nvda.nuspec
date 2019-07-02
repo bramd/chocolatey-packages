@@ -1,26 +1,34 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <metadata>
     <id>nvda</id>
     <title>NVDA</title>
-    <version>2019.1</version>
+    <version>2019.1.1</version>
     <authors>NVAccess</authors>
     <owners>Bram Duvigneau</owners>
     <summary>A free and open source screenreader for Windows</summary>
-    <description>
-NVDA (NonVisual Desktop Access) is a free "screen reader" which enables blind and vision impaired people to use computers. It reads the text on the screen in a computerised voice. You can control what is read to you by moving the cursor to the relevant area of text with a mouse or the arrows on your keyboard.
+    <description><![CDATA[NVDA (NonVisual Desktop Access) is a free, open source screen reader for Microsoft Windows.
+It is developed by NV Access in collaboration with a global community of contributors.
+To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) website.
 
-NVDA can also convert the text into braille if the computer user owns a device called a "braille display".
-
-NVDA provides the key to education and employment for many blind people. It also provides access to social networking, online shopping, banking and news.
-NVDA works with Microsoft Windows. You can download it to your PC, or to a USB stick which you can use with any computer.
-
-Normally screen readers are expensive, making them unaffordable for many blind people. NVDA is free. It's been downloaded 70,000+ times, in 43 languages.
-    </description>
+## Key Project Links
+* [NV Access](http://www.nvaccess.org/): The main home of NVDA
+* [NVDA on GitHub](https://github.com/nvaccess/nvda)
+* [NVDA issues on GitHub](https://github.com/nvaccess/nvda/issues): Bug reports, feature requests, etc.
+* [NVDA development snapshots](http://www.nvda-project.org/snapshots): Automatically generated builds of the project in its current state of development
+* [NVDA add-ons](http://addons.nvda-project.org/): Get add-ons to enhance NVDA
+* [Translating NVDA](https://github.com/nvaccess/nvda/wiki/Translating): Information about how to translate NVDA into another language
+* [NVDA community wiki](https://github.com/nvaccess/nvda-community/wiki): Articles contributed by the community
+* [NVDA Controller Client](http://www.nvda-project.org/nvdaControllerClient/nvdaControllerClient_20100219.7z) (2010-02-19): NVDA API for external applications to directly speak or braille messages, etc.
+* [NVDA Developer Guide](http://www.nvaccess.org/files/nvda/documentation/developerGuide.html)
+* [Contributing to NVDA](https://github.com/nvaccess/nvda/wiki/Contributing): Guidelines for contributing to the NVDA source code
+* [NVDA development email list](https://nvda-devel.groups.io/) ([Old archives](http://nabble.nvda-project.org/Development-f1.html)): Discussion about NVDA development
+* [NVDA commits email list](http://lists.sourceforge.net/lists/listinfo/nvda-commits): Notifications for all commits to the Git repository
+]]></description>
     <projectUrl>http://www.nvaccess.org/</projectUrl>
     <projectSourceUrl>https://github.com/nvaccess/nvda</projectSourceUrl>
     <packageSourceUrl>https://github.com/bramd/chocolatey-nvda</packageSourceUrl>
-    <releaseNotes>http://www.nvaccess.org/files/nvda/releases/2019.1/nvda_2019.1_changes.html</releaseNotes>
+    <releaseNotes>https://www.nvaccess.org/files/nvda/releases/2019.1.1/nvda_2019.1.1_changes.html</releaseNotes>
     <tags>screenreader admin</tags>
     <licenseUrl>https://github.com/nvaccess/nvda/blob/master/copying.txt</licenseUrl>
     <copyright>© 2006-2019 NVDA Contributors</copyright>
