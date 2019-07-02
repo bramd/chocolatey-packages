@@ -1,31 +1,30 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'nvda'
-$toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$packageVersion = '2019.1'
-$fileType = 'exe'
-$fileName = "nvda_$($packageVersion).exe"
-$fileLocation = Join-Path $toolsDir $fileName
-$silentArgs = '--install-silent'
 
+$fileType      = 'exe'
+$toolsDir      = Split-Path $MyInvocation.MyCommand.Definition
+$embedded_path = gi "$toolsDir\*.$fileType"
+
+$pp = Get-PackageParameters
+$params=@()
+if ($pp.NoLogon)     { Write-Host 'Do not start on the logon screen'; $params += '--enable-start-on-logon False'}
 
 $packageArgs = @{
-  packageName   = $packageName
-  unzipLocation = $toolsDir
-  fileType      = 'EXE'
-  file         = $fileLocation
-
-  softwareName  = 'NVDA' #part or all of the Display Name as you see it in Programs and Features. It should be enough to be unique
-
-  # Checksums are now required as of 0.10.0.
-  # To determine checksums, you can get that from the original site if provided. 
-  # You can also use checksum.exe (choco install checksum) and use it 
-  # e.g. checksum -t sha256 -f path\to\file
-  checksum      = '5BE84D3E8C5AE88409A1DCD06266B86BE875015274BCF374236D897A519D8A6D'
-  checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
-
-  silentArgs   = '--install-silent'
-  validExitCodes= @(0)
+  packageName    = $packageName
+  fileType       = $fileType
+  file           = $embedded_path
+  silentArgs     = '--install-silent' + ($params -join ' ')
+  validExitCodes = @(0)
+  softwareName   = $packageName.ToUpper()
 }
-
 Install-ChocolateyInstallPackage @packageArgs
+rm $embedded_path -ea 0
+
+$packageName = $packageArgs.packageName
+$installLocation = Get-AppInstallLocation $packageName
+if (!$installLocation)  { Write-Warning "Can't find $packageName install location"; return }
+Write-Host "$packageName installed to '$installLocation'"
+
+Register-Application "$installLocation\$packageName.exe"
+Write-Host "$packageName registered as $packageName"
