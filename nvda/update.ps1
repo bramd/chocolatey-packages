@@ -24,7 +24,6 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
-# function global:au_AfterUpdate  { Set-DescriptionFromReadme -SkipFirst 2 }
 
 function global:au_GetLatest {
     $download_page = Invoke-WebRequest -Uri $releases | Select -ExpandProperty Content
@@ -37,15 +36,15 @@ function global:au_GetLatest {
 
     $releaseNotes = $download_page -split "`n" -match "changesUrl:" -split ": " | Select -Last 1
 
-    $checksum32 = $download_page -split "`n" -match "launcherHash:" -split ": " |Select -Last 1
+    $checksum32 = $download_page -split "`n" -match "launcherHash:" -split ": " | Select -Last 1
 
     return @{
         URL32        = $url
         Checksum32   = $checksum32
-	       ChecksumType32 = 'md5 
+	       ChecksumType32 = 'md5'
         Version      = $version
         ReleaseNotes = $releaseNotes
     }
 }
 
-# update -ChecksumFor none
+update -ChecksumFor none
