@@ -3,7 +3,7 @@
   <metadata>
     <id>nvda</id>
     <title>NVDA</title>
-    <version>2019.2</version>
+    <version>2019.2.1</version>
     <authors>NVAccess</authors>
     <owners>Bram Duvigneau</owners>
     <summary>A free and open source screenreader for Windows</summary>
@@ -28,7 +28,7 @@ To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) w
     <projectUrl>http://www.nvaccess.org/</projectUrl>
     <projectSourceUrl>https://github.com/nvaccess/nvda</projectSourceUrl>
     <packageSourceUrl>https://github.com/bramd/chocolatey-packages</packageSourceUrl>
-    <releaseNotes>https://www.nvaccess.org/files/nvda/releases/2019.2/nvda_2019.2_changes.html</releaseNotes>
+    <releaseNotes>https://www.nvaccess.org/files/nvda/releases/2019.2.1/nvda_2019.2.1_changes.html</releaseNotes>
     <tags>screenreader admin</tags>
     <licenseUrl>https://github.com/nvaccess/nvda/blob/master/copying.txt</licenseUrl>
     <copyright>© 2006-2019 NVDA Contributors</copyright>
