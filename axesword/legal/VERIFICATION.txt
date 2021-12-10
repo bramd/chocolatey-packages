@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The software has been downloaded from the listed download
+location on <https://www.axes4.com/en/products-services/axesword>
+and can be verified by doing the following:
+
+1. Download the file: https://www.axes4.com/_Resources/Persistent/0/b/2/b/0b2b984658591aaf49c73985b3b1d57915114c82/axesWord.Setup.exe
+2. Get the checksum using one of the following methods:
+  - Using powershell function 'Get-FileHash'
+  - Use chocolatey utility 'checksum.exe'
+3. The checksums should match the following:
+
+  checksum type: sha256
+  checksum: BBBAA1F60DB288C2881516B65D8087CC39DB0C07FBAD56D45EDFF056F7A04AEB
+
