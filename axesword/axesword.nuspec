@@ -19,6 +19,7 @@
     <iconUrl>https://www.axes4.com/_Resources/Persistent/a/8/4/c/a84c9d2a55adbb461dfe3a2f9101fd6b142dadc2/axesWord%20white.svg</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
+      <dependency id="dotnetfx" version="4.8.0.20190930" />
     </dependencies>
   </metadata>
   <files>
