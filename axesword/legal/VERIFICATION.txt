@@ -6,12 +6,12 @@ The software has been downloaded from the listed download
 location on <https://www.axes4.com/en/products-services/axesword>
 and can be verified by doing the following:
 
-1. Download the file: https://www.axes4.com/_Resources/Persistent/0/b/2/b/0b2b984658591aaf49c73985b3b1d57915114c82/axesWord.Setup.exe
+1. Download the file: https://www.axes4.com/_Resources/Persistent/6/c/7/9/6c79692be7af5e9f85129dfaea2579c586234dc6/axesWord.Setup.exe
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: sha256
-  checksum: BBBAA1F60DB288C2881516B65D8087CC39DB0C07FBAD56D45EDFF056F7A04AEB
+  checksum: D3F59F705A7591344082C12746DACDF64454E6F1B30A371DCB5CB2C822676F1C
 

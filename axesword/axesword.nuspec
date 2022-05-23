@@ -3,7 +3,7 @@
   <metadata>
     <id>axesword</id>
     <title>axesWord</title>
-    <version>21.0.1</version>
+    <version>22.1.10</version>
     <authors>axes4</authors>
     <owners>Bram Duvigneau</owners>
     <summary>Generate Accessible PDF from Microsoft Word</summary>
