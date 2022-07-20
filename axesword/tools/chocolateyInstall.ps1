@@ -3,8 +3,8 @@
 $packageName = 'axesword'
 
 $fileType      = 'exe'
-$url           = 'https://www.axes4.com/_Resources/Persistent/6/c/7/9/6c79692be7af5e9f85129dfaea2579c586234dc6/axesWord.Setup.exe'
-$checksum      = 'D3F59F705A7591344082C12746DACDF64454E6F1B30A371DCB5CB2C822676F1C'
+$url           = 'https://www.axes4.com/_Resources/Persistent/4/0/4/1/4041d1db9c916234d9f7cd932c60fb9d621cd6e5/axesWord.Setup.exe'
+$checksum      = 'D47242EED9BF21B547DDD56F006CA48D5EE3A32A64F1144E53F6CDB4B30709C0'
 
 $pp = Get-PackageParameters
 $params=@()
