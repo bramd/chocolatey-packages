@@ -6,13 +6,13 @@ The embedded software have been downloaded from the listed download
 location on <https://www.nvaccess.org/download/>
 and can be verified by doing the following:
 
-1. Download the file: https://www.nvaccess.org/download/nvda/releases/2022.4/nvda_2022.4.exe
+1. Download the file: https://www.nvaccess.org/download/nvda/releases/2023.1/nvda_2023.1.exe
 2. Get the checksum using one of the following methods:
   - Using powershell function 'Get-FileHash'
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
   checksum type: md5
-  checksum: 5536A316197591324E5B9A715E04899893EBEFE785E573EC21747EA83880638F
+  checksum: A9A6D90125839CD95C3481FFB5B6CA83B4DEF5576ED02C29DCC975CF8DBDEA25
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/nvaccess/nvda/blob/release-2017.4/copying.txt>
