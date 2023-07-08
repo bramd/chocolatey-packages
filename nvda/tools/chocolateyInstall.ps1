@@ -14,7 +14,7 @@ $packageArgs = @{
   packageName    = $packageName
   fileType       = $fileType
   file           = $embedded_path
-  silentArgs     = '--install-silent' + ($params -join ' ')
+  silentArgs     = '--install-silent',($params -join ' ') -join ' '
   validExitCodes = @(0)
   softwareName   = $packageName.ToUpper()
 }
