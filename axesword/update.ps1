@@ -26,9 +26,9 @@ function global:au_BeforeUpdate { Get-RemoteFiles -Purge }
 
 function global:au_GetLatest {
      $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing #1
-     $regex   = '.exe$'
+     $regex   = '\.exe$'
      $url     = $download_page.links | ? href -match $regex | select -First 1 -expand href #2
-     $version = [regex]::Match($download_page.Content, "Current Version: ([0-9\.]+)").Groups[1].Value
+     $version = [regex]::Match($url, "Setup\.([0-9\\_]+)\.exe").Groups[1].Value -replace "_", "."
      return @{ Version = $version; URL32 = $url }
 }
 
