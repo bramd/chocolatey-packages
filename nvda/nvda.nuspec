@@ -3,7 +3,7 @@
   <metadata>
     <id>nvda</id>
     <title>NVDA</title>
-    <version>2024.1</version>
+    <version>2024.1.0.20240425</version>
     <authors>NVAccess</authors>
     <owners>Bram Duvigneau</owners>
     <summary>A free and open source screenreader for Windows</summary>
