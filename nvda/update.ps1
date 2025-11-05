@@ -2,8 +2,8 @@ import-module au
 . $PSScriptRoot\..\_scripts\all.ps1
 
 # This uRL is used by NVDA's update checker and returns a download URL for the latest version
-# We request an update from version 2019.2, which returns the latest version as of now. If this changes in the future, we might need to make the version dynamic.
-$releases    = 'https://www.nvaccess.org/nvdaUpdateCheck?autoCheck=False&allowUsageStats=False&version=2019.2&versionType=stable&osVersion=10.0.17763&x64=True'
+# We request an update from version 2025.3, which returns the latest version as of now. If this changes in the future, we might need to make the version dynamic.
+$releases    = 'https://api.nvaccess.org/nvdaUpdateCheck?autoCheck=False&allowUsageStats=False&version=2025.3&versionType=stable&osVersion=&x64=True'
 
 function global:au_SearchReplace {
    @{
