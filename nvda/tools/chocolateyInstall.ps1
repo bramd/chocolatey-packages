@@ -14,7 +14,10 @@ $packageArgs = @{
   packageName    = $packageName
   fileType       = $fileType
   file           = $embedded_path
-  silentArgs     = '--install-silent',($params -join ' ') -join ' '
+  # --minimal (no sounds, no interface, no start message) is needed next to
+  # --install-silent: since 2026.2 the installer hangs on machines without an
+  # audio output device, such as the Chocolatey package verifier.
+  silentArgs     = '--minimal --install-silent',($params -join ' ') -join ' '
   validExitCodes = @(0)
   softwareName   = $packageName.ToUpper()
 }
