@@ -17,8 +17,9 @@ function global:au_SearchReplace {
         }
 
         ".\legal\VERIFICATION.txt" = @{
-          "(?i)(\s+file:).*"            = "`${1} $($Latest.URL32)"
-          "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum32)"
+          "(?i)(\s+file:).*"            = "`${1} $($Latest.URL64)"
+          "(?i)(checksum type:).*"   = "`${1} $($Latest.ChecksumType64)"
+          "(?i)(checksum:).*"        = "`${1} $($Latest.Checksum64)"
         }
     }
 }
@@ -37,14 +38,20 @@ function global:au_GetLatest {
     # 400 Bad Request, so pad two part versions: 2026.2 -> 2026.2.0
     if ($version -notmatch '^\d+\.\d+\.\d+') { $version = "$version.0" }
 
+    # The update check no longer returns a changesUrl line, so fall back to the
+    # full change log, which covers every version.
     $releaseNotes = $download_page -split "`n" -match "changesUrl:" -split ": " | Select -Last 1
+    if (!$releaseNotes) { $releaseNotes = 'https://download.nvaccess.org/documentation/changes.html' }
 
-    $checksum32 = $download_page -split "`n" -match "launcherHash:" -split ": " | Select -Last 1
+    $checksum64 = $download_page -split "`n" -match "launcherHash:" -split ": " | Select -Last 1
 
     return @{
-        URL32        = $url
-        Checksum32   = $checksum32
-	       ChecksumType32 = 'md5'
+        # NVDA 2026 and later only run on 64 bit Windows, so the package is a 64
+        # bit one even though the launcher itself is still a 32 bit stub.
+        URL64        = $url
+        # Checksum64/ChecksumType64 are overwritten by Get-RemoteFiles, which
+        # hashes the downloaded file with sha256.
+        Checksum64   = $checksum64
         Version      = $version
         ReleaseNotes = $releaseNotes
     }

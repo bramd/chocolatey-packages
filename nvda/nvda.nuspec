@@ -11,6 +11,8 @@
 It is developed by NV Access in collaboration with a global community of contributors.
 To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) website.
 
+NVDA 2026 and later require a 64 bit edition of Windows 10 or Windows 11, or Windows Server 2016 or later. On 32 bit Windows, install 2025.3.3 instead.
+
 ## Key Project Links
 * [NV Access](http://www.nvaccess.org/): The main home of NVDA
 * [NVDA on GitHub](https://github.com/nvaccess/nvda)
@@ -22,7 +24,7 @@ To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) w
 * [NVDA Controller Client](http://www.nvda-project.org/nvdaControllerClient/nvdaControllerClient_20100219.7z) (2010-02-19): NVDA API for external applications to directly speak or braille messages, etc.
 * [NVDA Developer Guide](http://www.nvaccess.org/files/nvda/documentation/developerGuide.html)
 * [Contributing to NVDA](https://github.com/nvaccess/nvda/wiki/Contributing): Guidelines for contributing to the NVDA source code
-* [NVDA development email list](https://nvda-devel.groups.io/) ([Old archives](http://nabble.nvda-project.org/Development-f1.html)): Discussion about NVDA development
+* [NVDA development email list](https://nvda-devel.groups.io/): Discussion about NVDA development
 * [NVDA commits email list](http://lists.sourceforge.net/lists/listinfo/nvda-commits): Notifications for all commits to the Git repository
 ]]></description>
     <projectUrl>http://www.nvaccess.org/</projectUrl>
@@ -31,9 +33,9 @@ To learn more about NVDA, visit the main [NV Access](http://www.nvaccess.org/) w
     <releaseNotes></releaseNotes>
     <tags>screenreader admin</tags>
     <licenseUrl>https://github.com/nvaccess/nvda/blob/master/copying.txt</licenseUrl>
-    <copyright>© 2006-2019 NVDA Contributors</copyright>
+    <copyright>© 2006-2026 NVDA Contributors</copyright>
     <requireLicenseAcceptance>false</requireLicenseAcceptance> <!-- or true if you require the user to accept the License before installing -->
-    <iconUrl>http://community.nvda-project.org/chrome/site/images/nvda_100x100white.png</iconUrl>
+    <iconUrl>https://raw.githubusercontent.com/nvaccess/nvda/master/source/images/nvda.ico</iconUrl>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.3.3" />
     </dependencies>

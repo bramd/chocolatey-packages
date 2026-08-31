@@ -13,10 +13,15 @@ if ($pp.NoLogon)     { Write-Host 'Do not start on the logon screen'; $params +=
 $packageArgs = @{
   packageName    = $packageName
   fileType       = $fileType
-  file           = $embedded_path
-  # --minimal (no sounds, no interface, no start message) is needed next to
-  # --install-silent: since 2026.2 the installer hangs on machines without an
-  # audio output device, such as the Chocolatey package verifier.
+  # NVDA 2026 and later only run on 64 bit Windows. Passing the installer as
+  # file64 with no file makes Chocolatey refuse a 32 bit install with
+  # "32-bit installation is not supported for nvda" instead of running a
+  # launcher that cannot work.
+  file64         = $embedded_path
+  # --minimal means no sounds, no interface and no start message while the
+  # temporary copy of NVDA performs the install. It was added while chasing a
+  # verifier hang, which it did not fix, but it keeps an unattended install
+  # quiet, so it stays.
   silentArgs     = '--minimal --install-silent',($params -join ' ') -join ' '
   validExitCodes = @(0)
   softwareName   = $packageName.ToUpper()

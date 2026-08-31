@@ -12,7 +12,7 @@ and can be verified by doing the following:
   - Use chocolatey utility 'checksum.exe'
 3. The checksums should match the following:
 
-  checksum type: md5
+  checksum type: sha256
   checksum: F3F8D29974A88D687B3C4809BE192219EC579C5BDABCDA5AAF53635288BCA824
 
 The file 'LICENSE.txt' has been obtained from <https://github.com/nvaccess/nvda/blob/release-2017.4/copying.txt>
