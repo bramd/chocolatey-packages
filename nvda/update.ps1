@@ -33,6 +33,9 @@ function global:au_GetLatest {
     $url = $url -split "\?update" | Select -first 1
 
     $version = $url -split '_|.exe' | Select -Last 1 -Skip 1
+    # The Chocolatey community repository rejects non-normalized versions with a
+    # 400 Bad Request, so pad two part versions: 2026.2 -> 2026.2.0
+    if ($version -notmatch '^\d+\.\d+\.\d+') { $version = "$version.0" }
 
     $releaseNotes = $download_page -split "`n" -match "changesUrl:" -split ": " | Select -Last 1
 
